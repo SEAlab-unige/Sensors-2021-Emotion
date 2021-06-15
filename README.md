@@ -9,7 +9,7 @@ This repository concerns the deployment on smartphone of the paper **"Emotion Re
 * Erik Cambria: cambria@ntu.edu.sg
 
 ## Table of contents
-* [Linear separator application](#android-application)
+* [Linear separator application](#linear-separator-application)
 * [Reference](#reference)
 
 ## Linear separator application
