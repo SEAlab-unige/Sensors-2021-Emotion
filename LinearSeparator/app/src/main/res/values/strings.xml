@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LinearSeparator</string>
+
+    <string name="text_view_features">Features num:</string>
+    <string name="text_view_samples">Samples num:</string>
+    <string name="text_view_epochs">Epochs:</string>
+    <string name="text_view_batch_size">Batch size:</string>
+    <string name="text_view_classes">Classes num:</string>
+    <string name="text_view_compute">Compute</string>
+    <string name="text_view_avg_time">Average time:</string>
+    <string name="text_view_std_time">Standard deviation:</string>
+    <string name="text_view_reset">___ ms</string>
+    <string name="text_view_number">100</string>
+
+</resources>
