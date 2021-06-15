@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Compute standard deviation
-    fun computeStandardDeviation(timeArray: Array<Long>, mean:Double): Double {
+    private fun computeStandardDeviation(timeArray: Array<Long>, mean:Double): Double {
         var standardDeviation = 0.0
         for (num in timeArray) {
             standardDeviation += Math.pow(num - mean, 2.0)
