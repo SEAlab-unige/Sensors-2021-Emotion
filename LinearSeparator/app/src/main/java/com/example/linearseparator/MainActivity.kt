@@ -10,8 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+    // Private constant
     private val TAG = "MainActivity"
 
+    // Private variables
     private lateinit var meanTimeTextView: TextView
     private lateinit var stdDevTimeTextView: TextView
     private lateinit var featuresTextView: TextView
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Connect variables to widgets
         meanTimeTextView = findViewById<TextView>(R.id.avg_time_txtv)
         stdDevTimeTextView = findViewById<TextView>(R.id.std_time_txtv)
         featuresTextView = findViewById<TextView>(R.id.num_features_txtv)
@@ -34,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         batchTextView = findViewById<TextView>(R.id.batch_size_txtv)
     }
 
+    // Create random data matrix
     private fun createData(samplesNum: Int, featuresNum: Int) : Array<DoubleArray> {
         val random = Random(0)
         val x = Array(samplesNum) { DoubleArray(featuresNum) }
@@ -44,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         return x
     }
 
+    // Create random labels vector
     private fun createLabels(samplesNum: Int, classesNum: Int) : DoubleArray {
         val random = Random(0)
         val y = DoubleArray(samplesNum)
@@ -53,34 +58,45 @@ class MainActivity : AppCompatActivity() {
         return y
     }
 
+    // Compute solution of the optimization problem
     fun compute(view: View){
+        // Retrieve values from widgets
         val samplesNum:Int = samplesTextView.text.toString().toInt()
         val featuresNum:Int = featuresTextView.text.toString().toInt()
         val classesNum:Int = classesTextView.text.toString().toInt()
         val epochs = epochsTextView.text.toString().toInt()
         val batchSize = batchTextView.text.toString().toInt()
+        // Set number of trials
         val counter = 30
         val timeArray  = Array(counter) { i -> i * 0L }
         for (i in 0 until counter) {
+            // Create data matrix
             val x = createData(samplesNum, featuresNum)
+            // Create labels vector
             val y = createLabels(samplesNum, classesNum)
-            val regressor = Separator(featuresNum)
+            // Create separator object
+            val separator = Separator(featuresNum)
+            // Start timer
             val startTime = SystemClock.uptimeMillis()
-            regressor.fit(x, y, epochs, batchSize)
+            // Fit separator
+            separator.fit(x, y, epochs, batchSize)
+            // Stop timer
             val endTime = SystemClock.uptimeMillis()
+            // Fill time array
             timeArray[i] = (endTime - startTime)
         }
+        // Display average time
         meanTimeTextView.setText("%.3f ms".format(timeArray.average()))
+        // Display standard deviation
         stdDevTimeTextView.setText("%.3f ms".format(computeStandardDeviation(timeArray, timeArray.average())))
     }
 
+    // Compute standard deviation
     fun computeStandardDeviation(timeArray: Array<Long>, mean:Double): Double {
         var standardDeviation = 0.0
-
         for (num in timeArray) {
             standardDeviation += Math.pow(num - mean, 2.0)
         }
-
         return Math.sqrt(standardDeviation / timeArray.size)
     }
 }
