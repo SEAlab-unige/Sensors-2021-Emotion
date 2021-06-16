@@ -17,7 +17,15 @@ This repository concerns the deployment on smartphone of the paper **"Emotion Re
 Currently, the minimum SDK Version is 26. This indicates that smartphones with an Android version higher (or equal) than Android 8.0 (Oreo) can run the application. 
 
 ### Description
+The purpose of this Android application is to show the feasibility of the training process in the case of the linear separator described in the paper. 
+The considered aspect is the time to solve the optimization problem and retrieve the parameters of the linear separator.
 
+The app generates randomly a data matrix and a labels vector (with the correct range of classes number) to recreate the conditions of a complex problem
+Throught the algorithm of mini-batch gradient descent the linear separator computes weights and bias of the solving hyperplane.
+
+The user can select different parameters: ...
+The eventual output of the application is the time, expressed in average ms and standard deviation, to solve the problem over ... trials.
+ 
 
 ## Reference
 If you find the code or pre-trained models useful, please cite the following paper:
