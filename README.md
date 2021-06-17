@@ -24,7 +24,6 @@ Throught the algorithm of mini-batch gradient descent the linear separator compu
 
 The user can select different parameters: number of features (columns of data matrix), number of samples (rows of data matrix), number of classes (depends on the addressed problem), number of epochs for gradient descent and finally the batch size. The eventual output of the application is the time, expressed in average ms and standard deviation, to solve the problem over 30 trials.
  
-
 ## Reference
 If you find the code or pre-trained models useful, please cite the following paper:
 

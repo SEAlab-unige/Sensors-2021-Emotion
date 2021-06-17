@@ -1,7 +1,13 @@
-class MathOps {
+/*
+*
+*
+*/
 
+
+class MathOps {
     companion object {
 
+        // Compute dot product
         fun dot(a: DoubleArray, b: DoubleArray): Double {
             var dotProduct = 0.0
             for (i in 0 until a.size) {
@@ -10,6 +16,7 @@ class MathOps {
             return dotProduct
         }
 
+        // Compute the difference between two arrays of double
         fun subtract(a: DoubleArray, b: DoubleArray): DoubleArray {
             val difference = DoubleArray(a.size)
             for (i in 0 until a.size) {
@@ -18,6 +25,7 @@ class MathOps {
             return difference
         }
 
+        // Compute multiplication between scalar and array
         fun multiplyScalar(a: DoubleArray, k: Double): DoubleArray {
             val results = DoubleArray(a.size)
             for (i in 0 until a.size) {
@@ -26,6 +34,7 @@ class MathOps {
             return results
         }
 
+        // Compute multidimensional mean
         fun multidimMean(x: Array<DoubleArray>): Array<Double> {
             val mean = ArrayList<Double>()
             for (i in 0 until x[0].size) {

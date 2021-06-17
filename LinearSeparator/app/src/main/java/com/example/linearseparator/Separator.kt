@@ -1,13 +1,20 @@
+/*
+*
+*
+*/
+
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.math.pow
 
 class Separator(private val numFeatures: Int) {
 
+    // Private variables
     private var weights: DoubleArray
     private var bias = 0.0
     private var learningRate = 0.001
 
+    // Initialization
     init {
         val random = Random(0)
         val weights = DoubleArray(numFeatures)
@@ -17,6 +24,7 @@ class Separator(private val numFeatures: Int) {
         this.weights = weights
     }
 
+    //
     fun fit(x: Array<DoubleArray>, y: DoubleArray, epochs: Int, batchSize: Int) {
         val batches = batch(x, y, batchSize)
         for (e in 0 until epochs) {
@@ -32,14 +40,16 @@ class Separator(private val numFeatures: Int) {
         }
     }
 
+    // Perform prediction
     private fun forwardPropagate(x: DoubleArray): Double {
         return MathOps.dot(this.weights, x) + bias
     }
 
+    // Compute gradients
     private fun calculateGradients(
-        inputs: DoubleArray,
-        predY: Double,
-        targetY: Double
+            inputs: DoubleArray,
+            predY: Double,
+            targetY: Double
     ): Array<Any> {
         val dJ_dPred = meanSquaredErrorDerivative(predY, targetY)
         val dPred_dW = inputs
@@ -48,13 +58,14 @@ class Separator(private val numFeatures: Int) {
         return arrayOf(dJ_dW, dJ_dB)
     }
 
+    // Apply mini-batch gradient descent
     private fun optimizeParameters(gradients: ArrayList<Array<Any>>, learningRate: Double) {
         val weightGradientsList = ArrayList<DoubleArray>()
         for (gradient in gradients) {
             weightGradientsList.add(gradient[0] as DoubleArray)
         }
         val weightGradients =
-            MathOps.multidimMean(weightGradientsList.toTypedArray()).toDoubleArray()
+                MathOps.multidimMean(weightGradientsList.toTypedArray()).toDoubleArray()
 
         val biasGradientsList = ArrayList<Double>()
         for (gradient in gradients) {
@@ -62,18 +73,20 @@ class Separator(private val numFeatures: Int) {
         }
         val biasGradients = (biasGradientsList.toTypedArray()).average()
         this.weights =
-            MathOps.subtract(this.weights, MathOps.multiplyScalar(weightGradients, learningRate))
+                MathOps.subtract(this.weights, MathOps.multiplyScalar(weightGradients, learningRate))
         this.bias = this.bias - (biasGradients * learningRate)
     }
 
+    // Compute the least squares derivative
     private fun meanSquaredErrorDerivative(predY: Double, targetY: Double): Double {
         return 2 * (predY - targetY)
     }
 
+    // Retrieve batch
     private fun batch(
-        x: Array<DoubleArray>,
-        y: DoubleArray,
-        batchSize: Int
+            x: Array<DoubleArray>,
+            y: DoubleArray,
+            batchSize: Int
     ): List<List<Pair<DoubleArray, Double>>> {
         val data = x.zip(y.toTypedArray())
         return data.chunked(batchSize)

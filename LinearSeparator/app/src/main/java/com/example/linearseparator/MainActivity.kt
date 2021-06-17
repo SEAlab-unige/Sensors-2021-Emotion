@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+
     // Private constant
     private val TAG = "MainActivity"
 
