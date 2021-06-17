@@ -22,7 +22,7 @@ The purpose of this Android application is to show the feasibility of the traini
 The app generates randomly a data matrix and a labels vector (with the correct range of classes number) to recreate the conditions of a complex problem.
 Throught the algorithm of mini-batch gradient descent the linear separator computes weights and bias of the solving hyperplane.
 
-The user can select different parameters: number of features (columns of data matrix), number of samples (rows of data matrix), number of classes (depends on the addressed problem), number of epochs for gradient descent and finally the batch size. The eventual output of the application is the time, expressed in average ms and standard deviation, to solve the problem over 30 trials.
+The user can select different parameters: number of features (columns of data matrix), number of samples (rows of data matrix), number of classes (depends on the addressed problem), number of epochs for gradient descent and finally the batch size. The eventual output of the application is the time, expressed in average and standard deviation, to solve the problem over 30 trials.
  
 ## Reference
 If you find the code or pre-trained models useful, please cite the following paper:
