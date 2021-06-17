@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private LoadDataset loadDataset;
 
     // Widget
-//    private Switch swtc_useGPU;
     private Spinner spn_modelName;
     private TextView txtv_mean;
     private TextView txtv_stdDev;
@@ -47,12 +46,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         // Link widgets to XML
         spn_modelName = (Spinner) findViewById(R.id.spinner_model_name);
-//        swtc_useGPU = (Switch) findViewById(R.id.switch_use_gpu);
         txtv_mean = (TextView) findViewById(R.id.text_view_mean);
         txtv_stdDev = (TextView) findViewById(R.id.text_view_standard_deviation);
-
-        // Initialize switch
-//        swtc_useGPU.setChecked(false);
 
         // Load models name in spinner
         setUpModelSpinner(spn_modelName, MODEL_DIR);
@@ -99,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String item = parent.getItemAtPosition(position).toString();
         if (!item.equals(EMPTY_TEXT)) {
             if (parent == spn_modelName) {
-//                bertSentiment.loadModel(selectModel(MODEL_DIR, item), swtc_useGPU.isChecked());
                 bertSentiment.loadModel(selectModel(MODEL_DIR, item));
             }
             // Display TOAST
@@ -165,9 +159,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             displayMessage("Dataset or model absent!");
         }
     }
-//    public void useGPU(View v){
-//        resetSpinner();
-//    }
+
     private void resetResults() {
         // Reset results widgets
         txtv_mean.setText(R.string.result_txtv);

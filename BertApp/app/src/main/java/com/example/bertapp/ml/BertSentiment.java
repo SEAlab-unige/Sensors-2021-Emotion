@@ -70,20 +70,11 @@ public class BertSentiment {
     }
 
     // Methods
-    public void loadModel(String modelPath){ //, boolean useGPU) {
+    public void loadModel(String modelPath){
         try {
             ByteBuffer buffer = loadModelFile(this.context.getAssets(),  modelPath);
             loadDictionary();
-//            // Initialize interpreter with GPU delegate
-//            Interpreter.Options options = new Interpreter.Options();
-//            CompatibilityList compatList = new CompatibilityList();
-//            NnApiDelegate nnApiDelegate = null;
-//            // Initialize interpreter with NNAPI delegate for Android Pie or above
-//            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && useGPU) {
-//                nnApiDelegate = new NnApiDelegate();
-//                options.addDelegate(nnApiDelegate);
-//            }
-//            tflite = new Interpreter(buffer, options);
+
             tflite = new Interpreter(buffer);
             DataType inputDataType = tflite.getInputTensor(0).dataType();
             DataType outputDataType = tflite.getOutputTensor(0).dataType();
