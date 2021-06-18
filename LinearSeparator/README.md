@@ -13,7 +13,7 @@ Throught the algorithm of mini-batch gradient descent the linear separator compu
 The user can select different parameters: number of features (columns of data matrix), number of samples (rows of data matrix), number of classes (depends on the addressed problem), number of epochs for gradient descent and finally the batch size. The eventual output of the application is the time, expressed in average and standard deviation, to solve the problem over 30 trials.
 
 The main classes are:
-* `MainActivity.kt`: this is the main activity of the application. In each one of the 30 trials it creates randomly the data matrix and labels vector, it instantiates the linear separator it retrieves the time to perform mini-batch gradient descent to get the hyperplane parameters. Finally it computes the average and the standard deviation of the time array.
+* `MainActivity.kt`: this is the main activity of the application. In each one of the 30 trials the data matrix and labels vector are created randomly, the linear separator is instantiated and the time to perform mini-batch gradient descent to get the hyperplane parameters is retrieved. Finally, the average and the standard deviation of the time array are computed.
 * `Separator.kt`: this is the linear separator class.
 * `MathOps.kt`: this class contains math operations.
 
