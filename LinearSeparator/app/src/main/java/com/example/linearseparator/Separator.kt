@@ -24,7 +24,7 @@ class Separator(private val numFeatures: Int) {
         this.weights = weights
     }
 
-    //
+    // Loop to find hyperplane parameters
     fun fit(x: Array<DoubleArray>, y: DoubleArray, epochs: Int, batchSize: Int) {
         val batches = batch(x, y, batchSize)
         for (e in 0 until epochs) {
