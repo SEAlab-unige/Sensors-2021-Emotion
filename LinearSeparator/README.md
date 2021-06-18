@@ -14,6 +14,6 @@ The user can select different parameters: number of features (columns of data ma
 
 The main classes are:
 * `MainActivity.kt`: this is the main activity of the application. In each one of the 30 trials the data matrix and labels vector are created randomly, the linear separator is instantiated and the time to perform mini-batch gradient descent to get the hyperplane parameters is retrieved. Finally, the average and the standard deviation of the time array are computed.
-* `Separator.kt`: this is the linear separator class.
+* `Separator.kt`: this is the linear separator class. It holds the methods to compute the mini-batch gradient descent.
 * `MathOps.kt`: this class contains math operations.
 
