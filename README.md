@@ -1,5 +1,5 @@
 # Emotion Recognition on Edge Devices: Training and Deployment
-This repository concerns the deployment on smartphone of the paper **"Emotion Recognition on Edge Devices: Training and Deployment"** by ... et al., [DOI](...)
+This repository concerns the deployment on smartphone of the paper **"Emotion Recognition on Edge Devices: Training and Deployment"** by Pandelea et al., [DOI](...)
 
 ## Authors
 * Vlad Pandelea: vlad.pandelea@ntu.edu.sg
@@ -9,8 +9,15 @@ This repository concerns the deployment on smartphone of the paper **"Emotion Re
 * Erik Cambria: cambria@ntu.edu.sg
 
 ## Table of contents
+* [Feature extractor application](#feature-extractor-application)
 * [Linear separator application](#linear-separator-application)
 * [Reference](#reference)
+
+## Feature extractor application
+### Requirements
+Currently, the minimum SDK Version is 26. This indicates that smartphones with an Android version higher (or equal) than Android 8.0 (Oreo) can run the application. 
+
+### Description
 
 ## Linear separator application
 ### Requirements
