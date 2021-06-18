@@ -40,7 +40,7 @@ The user can select different parameters: number of features (columns of data ma
 ## Reference
 If you find the code or pre-trained models useful, please cite the following paper:
 
-**Emotion Recognition on Edge Devices: Training and Deployment** ... [DOI](...)
+**Emotion Recognition on Edge Devices: Training and Deployment.** V. Pandelea, E. Ragusa, T. Apicella, P. Gastaldo and E. Cambria. Sensors, 2021.[DOI](...)
 
     @article{,
       title={},
