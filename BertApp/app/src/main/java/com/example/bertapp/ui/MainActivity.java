@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bertapp.R;
 import com.example.bertapp.ml.BertSentiment;
-import com.example.bertapp.ml.LoadDataset;
+import com.example.bertapp.utils.LoadDataset;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private BertSentiment bertSentiment;
     private LoadDataset loadDataset;
 
-    // Widget
+    // Widgets
     private Spinner spn_modelName;
     private TextView txtv_mean;
     private TextView txtv_stdDev;

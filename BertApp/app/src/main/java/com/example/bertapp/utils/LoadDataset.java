@@ -1,4 +1,4 @@
-package com.example.bertapp.ml;
+package com.example.bertapp.utils;
 
 import android.content.Context;
 import android.util.Log;
