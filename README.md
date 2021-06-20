@@ -1,5 +1,5 @@
 # Emotion Recognition on Edge Devices: Training and Deployment
-This repository concerns the deployment on smartphone of the paper **"Emotion Recognition on Edge Devices: Training and Deployment"** by Pandelea et al., [DOI](...)
+This repository concerns the deployment on smartphone of the techniques described in **"Emotion Recognition on Edge Devices: Training and Deployment"** by Pandelea et al., [DOI](...)
 
 ## Authors
 * Vlad Pandelea: vlad.pandelea@ntu.edu.sg
