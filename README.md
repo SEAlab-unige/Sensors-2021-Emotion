@@ -42,7 +42,7 @@ If you find the code or pre-trained models useful, please cite the following pap
 
 **Emotion Recognition on Edge Devices: Training and Deployment.** V. Pandelea, E. Ragusa, T. Apicella, P. Gastaldo and E. Cambria. Sensors, 2021. [DOI](...)
 
-    @article{,
+    @article{},
       title={},
       author={},
       journal={},
