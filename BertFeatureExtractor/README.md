@@ -12,6 +12,6 @@ The app performs Tiny-Bert inference phase over 100 samples of the test set and 
 The most important directories are:
 * `assets`: collection of 100 test phrases, Tiny-Bert models and vocaulary file.
 * `ml`: holds java classes concerning Bert feature extractor model and input feature converter.
-* `tokenization`: holds classes to perform tokenization.
+* `tokenization`: holds classes to perform tokenization. This folder is taken from [Bert Question and Answer](https://www.tensorflow.org/lite/examples/bert_qa/overview).
 * `ui`: holds MainActivity, which is the only activity of the application.
 * `utils`: holds file and dataset load utilities.
