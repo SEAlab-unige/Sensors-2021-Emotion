@@ -1,5 +1,5 @@
 # Emotion Recognition on Edge Devices: Training and Deployment
-This repository concerns the deployment on smartphone of the paper **"Emotion Recognition on Edge Devices: Training and Deployment"** by Pandelea et al., [DOI](...)
+This repository concerns the deployment on smartphone of the techniques described in **"Emotion Recognition on Edge Devices: Training and Deployment"** by Pandelea et al., [DOI](...)
 
 ## Authors
 * Vlad Pandelea: vlad.pandelea@ntu.edu.sg
@@ -20,7 +20,7 @@ Currently, the minimum SDK Version is 26. This indicates that smartphones with a
 ### Description
 The purpose of this Android application is to show the feasibility of the inference phase in the case of the feature extractor described in the **paper**.
 
-The user can select one out of three quantization formats of Tiny-Bert: INT8, FLOAT16, FLOAT32.
+The user can select one out of three quantization formats of Tiny-Bert: *INT8*, *FLOAT16*, *FLOAT32*. Each model was converted leveraging post-training quantization process, through *TFLite* framework.
 
 The app performs Tiny-Bert inference phase over 100 samples of the test set and it outputs the time expressed in average and standard deviation.
 
@@ -42,7 +42,7 @@ If you find the code or pre-trained models useful, please cite the following pap
 
 **Emotion Recognition on Edge Devices: Training and Deployment.** V. Pandelea, E. Ragusa, T. Apicella, P. Gastaldo and E. Cambria. Sensors, 2021. [DOI](...)
 
-    @article{,
+    @article{},
       title={},
       author={},
       journal={},
