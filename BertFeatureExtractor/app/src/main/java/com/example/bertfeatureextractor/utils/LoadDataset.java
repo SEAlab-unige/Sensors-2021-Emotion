@@ -13,9 +13,11 @@ import java.util.HashMap;
 import java.util.List;
 
 public class LoadDataset {
+    // Private constants
     private static final String TAG = "LoadDataset";
     private static final String JSON_DIR = "data/test_list_100.json";
 
+    // Private variables
     private String[] phrases;
     private int[] sentiments;
     private boolean empty;
@@ -49,6 +51,7 @@ public class LoadDataset {
         this.sentiments = sentiments;
     }
 
+    // Methods
     public void loadJson(Context context) {
         try {
             InputStream is = context.getAssets().open(JSON_DIR);
@@ -67,6 +70,7 @@ public class LoadDataset {
         }
     }
 
+    // Convert a list of strings into an array of strings
     private String[] listToArray(List<String> list) {
         String[] answer = new String[list.size()];
         int index = 0;
@@ -76,6 +80,7 @@ public class LoadDataset {
         return answer;
     }
 
+    // Convert a list of strings to an array of integers
     private int[] toIntegerArray(String[] list){
         int[] answer = new int[list.length];
         int index = 0;
@@ -84,7 +89,8 @@ public class LoadDataset {
         }
         return answer;
     }
-
+    
+    // Clear object
     public void close(){
         if (this.phrases != null){
             this.phrases = null;
