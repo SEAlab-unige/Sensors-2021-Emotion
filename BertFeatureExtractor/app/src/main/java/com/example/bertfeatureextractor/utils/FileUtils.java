@@ -1,8 +1,3 @@
-/*
- * Author: Tommaso Apicella
- * Email: tommaso.apicella@edu.unige.it
- */
-
 package com.example.bertfeatureextractor.utils;
 
 import android.content.Context;
