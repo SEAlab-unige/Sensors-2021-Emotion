@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">BertApp</string>
-    <string name="model_txtv">Select model:</string>
-    <string name="use_gpu_swtc">Use GPU:</string>
-    <string name="inference_btt">inference</string>
-    <string name="mean_txtv">Mean inference time:</string>
-    <string name="std_dev_txtv">Standard deviation:</string>
-    <string name="result_txtv">___ms</string>
-</resources>
