@@ -133,7 +133,7 @@ public class BertSentiment {
 
     /**
      * Input: Original phrase. Later converted to Feature by
-     * FeatureConverter. Output: A float array containing the logits.
+     * FeatureConverter. Output: A float array containing the predictions.
      */
     public float[] predict(String phrase) {
         Log.v(TAG, "TFLite model: running...");
