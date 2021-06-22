@@ -1,9 +1,3 @@
-/*
-*
-*
-*/
-
-
 class MathOps {
     companion object {
 
