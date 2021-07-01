@@ -1,5 +1,5 @@
 # Emotion Recognition on Edge Devices: Training and Deployment
-This repository concerns the deployment on smartphone of the techniques described in **"Emotion Recognition on Edge Devices: Training and Deployment"** by Pandelea et al., [DOI](...)
+This repository concerns the deployment on smartphone of the techniques described in **"Emotion Recognition on Edge Devices: Training and Deployment"** by Pandelea et al., [DOI](https://doi.org/10.3390/s21134496)
 
 ## Authors
 * Vlad Pandelea: vlad.pandelea@ntu.edu.sg
@@ -40,7 +40,7 @@ The user can select different parameters: number of features (columns of data ma
 ## Reference
 If you find the code or pre-trained models useful, please cite the following paper:
 
-**Emotion Recognition on Edge Devices: Training and Deployment.** V. Pandelea, E. Ragusa, T. Apicella, P. Gastaldo and E. Cambria. Sensors, 2021. [DOI](...)
+**Emotion Recognition on Edge Devices: Training and Deployment.** V. Pandelea, E. Ragusa, T. Apicella, P. Gastaldo and E. Cambria. Sensors, 2021. [DOI](https://doi.org/10.3390/s21134496)
 
     @article{},
       title={},
