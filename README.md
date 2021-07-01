@@ -42,11 +42,16 @@ If you find the code or pre-trained models useful, please cite the following pap
 
 **Emotion Recognition on Edge Devices: Training and Deployment.** V. Pandelea, E. Ragusa, T. Apicella, P. Gastaldo and E. Cambria. Sensors, 2021. [DOI](https://doi.org/10.3390/s21134496)
 
-    @article{},
-      title={},
-      author={},
-      journal={},
-      pages={},
-      year={},
-      publisher={}
+    @Article{s21134496,
+     AUTHOR = {Pandelea, Vlad and Ragusa, Edoardo and Apicella, Tommaso and Gastaldo, Paolo and Cambria, Erik},
+     TITLE = {Emotion Recognition on Edge Devices: Training and Deployment},
+     JOURNAL = {Sensors},
+     VOLUME = {21},
+     YEAR = {2021},
+     NUMBER = {13},
+     ARTICLE-NUMBER = {4496},
+     URL = {https://www.mdpi.com/1424-8220/21/13/4496},
+     ISSN = {1424-8220},
+     ABSTRACT = {Emotion recognition, among other natural language processing tasks, has greatly benefited from the use of large transformer models. Deploying these models on resource-constrained devices, however, is a major challenge due to their computational cost. In this paper, we show that the combination of large transformers, as high-quality feature extractors, and simple hardware-friendly classifiers based on linear separators can achieve competitive performance while allowing real-time inference and fast training. Various solutions including batch and Online Sequential Learning are analyzed. Additionally, our experiments show that latency and performance can be further improved via dimensionality reduction and pre-training, respectively. The resulting system is implemented on two types of edge device, namely an edge accelerator and two smartphones.},
+     DOI = {10.3390/s21134496}
     }
